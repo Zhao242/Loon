@@ -2,11 +2,18 @@
 DOMAIN-SUFFIX, embymv.tk, direct
 
 # Orange
-DOMAIN-SUFFIX, embytv.cf, direct
+DOMAIN-SUFFIX, otv.icu, direct
 
-# Loser 移动联通、电信
-DOMAIN-SUFFIX, loseremby.org, direct
-DOMAIN, 4837.emby.ml, direct
+# Loser
+DOMAIN-SUFFIX, xmsl.org, direct
 
-# 星猫
-DOMAIN, flare.timeouts.info, direct
+#不给看
+DOMAIN-SUFFIX,bgka.me,direct
+DOMAIN-SUFFIX,emby.pro,direct
+
+# Gugu
+DOMAIN-SUFFIX,gugumedia.link,direct
+
+#hxd
+DOMAIN-SUFFIX,bili.rip,direct
+
