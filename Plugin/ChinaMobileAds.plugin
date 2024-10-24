@@ -1,0 +1,25 @@
+#!name= 中国移动去广告
+#!desc= 中国移动去广告（搬运自不知名大佬）
+#!author= ShanYangAndXiangJun & 不知名大佬
+#!system = iOS
+#!tag = 去广告
+
+[rewrite]
+# 弹窗
+^https?:\/\/h\.app\.coc\.10086\.cn\/biz-orange\/DH\/popupWindow\/getDetail reject-dict
+
+[script]
+http-response ^https:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/init\/startInit$ script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/ChinaMobile/NoAds.js, requires-body=true, timeout=60, tag=启动页
+
+http-response ^https:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/emotionMarket\/getEmotionMarketNew$ script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/ChinaMobile/NoAds.js, requires-body=true, timeout=60, tag=首页悬浮
+
+http-response ^https:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/newTopPullSecond\/getNewTopPullList$ script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/ChinaMobile/NoAds.js, requires-body=true, timeout=60, tag=首页下拉
+
+http-response ^https:\/\/h\.app\.coc\.10086\.cn\/biz-orange\/DH\/homeArea\/getTopAreaList$ script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/ChinaMobile/NoAds.js, requires-body=true, timeout=60, tag=首页下拉2
+
+http-response ^https:\/\/h\.app\.coc\.10086\.cn\/biz-orange\/DH\/navigation\/getNavigationNewInfo$ script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/ChinaMobile/NoAds.js, requires-body=true, timeout=60, tag=办理横幅
+
+http-response ^https:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/friendShake\/getShakeList$ script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/ChinaMobile/NoAds.js, requires-body=true, timeout=60, tag=我的弹窗
+
+[mitm]
+hostname = client.app.coc.10086.cn, h.app.coc.10086.cn
